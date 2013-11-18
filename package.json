@@ -1,0 +1,32 @@
+{
+  "name": "nodebb-plugin-youtube",
+  "version": "0.0.1",
+  "description": "NodeBB YouTube Plugin",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psychobunny/nodebb-plugin-youtube"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "youtube",
+    "video",
+    "embed"
+  ],
+  "author": {
+    "name": "psychobunny",
+    "email": "psycho.bunny@hotmail.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/psychobunny/nodebb-plugin-youtube/issues"
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
+  "_id": "nodebb-plugin-youtube@0.0.1",
+  "_from": "nodebb-plugin-youtube@~0.0.1"
+}

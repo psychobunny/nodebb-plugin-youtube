@@ -1,0 +1,10 @@
+{
+	"id": "nodebb-plugin-youtube",
+	"name": "NodeBB YouTube Plugin",
+	"description": "NodeBB Plugin that allows users to embed YouTube videos inline in their posts.",
+	"url": "https://github.com/psychobunny/nodebb-plugin-youtube",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "filter:post.parse", "method": "parse", "callbacked": true }
+	]
+}
