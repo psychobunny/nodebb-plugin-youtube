@@ -2,11 +2,19 @@
 	"use strict";
 
 	var Youtube = {},
-		embed = '<iframe class="youtube-plugin" width="640" height="360" src="http://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>';
+		embed = '<iframe class="youtube-plugin" width="640" height="360" src="//www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>';
 
 	Youtube.parse = function(postContent, callback) {
 		// modified from http://stackoverflow.com/questions/7168987/
-		postContent = postContent.replace(/<a href="(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)<\/a>/g, embed);
+		var	regularUrl = /<a href="(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)">.+<\/a>/g,
+			embedUrl = /<a href="(?:https?:\/\/)?(?:www\.)youtube.com\/embed\/([\w\-_]+)">.+<\/a>/;
+
+		if (postContent.match(embedUrl)) {
+			postContent = postContent.replace(embedUrl, embed);
+		} else if (postContent.match(regularUrl)) {
+			postContent = postContent.replace(regularUrl, embed);
+		}
+
 		callback(null, postContent);
 	};
 
