@@ -5,3 +5,7 @@ This NodeBB plugin allows users to embed YouTube videos inline in their posts. S
 ## Installation
 
     npm install nodebb-plugin-youtube
+
+## Screenshots
+
+![youtube-plugin.png](http://i.imgur.com/EdDQP14.png) 
