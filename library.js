@@ -2,7 +2,7 @@
 	"use strict";
 
 	var Youtube = {},
-		embed = '<iframe class="youtube-plugin" width="640" height="360" src="//www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>';
+		embed = '<iframe class="youtube-plugin" width="640" height="360" src="//www.youtube.com/embed/$1?wmode=opaque" frameborder="0" allowfullscreen></iframe>';
 
 	Youtube.parse = function(postContent, callback) {
 		// modified from http://stackoverflow.com/questions/7168987/
