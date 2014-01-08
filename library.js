@@ -6,13 +6,18 @@
 
 	Youtube.parse = function(postContent, callback) {
 		// modified from http://stackoverflow.com/questions/7168987/
-		var	regularUrl = /<a href="(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)">.+<\/a>/g,
-			embedUrl = /<a href="(?:https?:\/\/)?(?:www\.)youtube.com\/embed\/([\w\-_]+)">.+<\/a>/;
+		var	regularUrl = /<a href="(?:https?:\/\/)?(?:www\.)?(?:youtube\.com)\/(?:watch\?v=)(.+)">.+<\/a>/g;
+		var	shortUrl = /<a href="(?:https?:\/\/)?(?:www\.)?(?:youtu\.be)\/(.+)">.+<\/a>/g;
+		var	embedUrl = /<a href="(?:https?:\/\/)?(?:www\.)youtube.com\/embed\/([\w\-_]+)">.+<\/a>/;
 
 		if (postContent.match(embedUrl)) {
 			postContent = postContent.replace(embedUrl, embed);
-		} else if (postContent.match(regularUrl)) {
+		}
+		if (postContent.match(regularUrl)) {
 			postContent = postContent.replace(regularUrl, embed);
+		}
+		if (postContent.match(shortUrl)) {
+			postContent = postContent.replace(shortUrl, embed);
 		}
 
 		callback(null, postContent);
