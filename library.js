@@ -1,8 +1,8 @@
 (function(module) {
 	"use strict";
-
+	// responsive format found at http://avexdesigns.com/responsive-youtube-embed/
 	var Youtube = {},
-		embed = '<iframe class="youtube-plugin" width="640" height="360" src="//www.youtube.com/embed/$1?wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+		embed = '<div class="video-container"><iframe class="youtube-plugin" width="640" height="360" src="//www.youtube.com/embed/$1?wmode=opaque" allowfullscreen></iframe></div>';
 
 	Youtube.parse = function(postContent, callback) {
 		// modified from http://stackoverflow.com/questions/7168987/
