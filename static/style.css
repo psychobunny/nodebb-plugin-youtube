@@ -1,5 +1,7 @@
 iframe.youtube-plugin {
 	border: 0;
+	height: 360px;
+	width: 640px;
 }
 .video-container {
     position: relative;
@@ -17,3 +19,54 @@ iframe.youtube-plugin {
     height: 100%;
 }
 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (max-width : 321px) {
+
+	iframe.youtube-plugin {
+	border: 0;
+	height: 180px;
+	width: 100%;
+	}
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+
+	iframe.youtube-plugin {
+	border: 0;
+	height: 180px;
+	width: 100%;
+	}
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1000px)
+and (orientation : landscape) {
+
+	iframe.youtube-plugin {
+	border: 0;
+	height: 360px;
+	width: 100%;
+	}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	
+	iframe.youtube-plugin {
+	border: 0;
+	height: 360px;
+	width: 100%;
+	}
+	
+}
