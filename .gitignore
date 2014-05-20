@@ -215,3 +215,4 @@ pip-log.txt
 .mr.developer.cfg
 
 sftp-config.json
+node_modules/
