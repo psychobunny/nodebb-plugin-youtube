@@ -6,7 +6,7 @@
 	"library": "./library.js",
 	"hooks": [
 		{
-			"hook": "filter:post.parse", "method": "parse", "priority": 6
+			"hook": "filter:parse.post", "method": "parse", "priority": 6
 		}
 	],
 	"css": [
